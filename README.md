@@ -1,3 +1,4 @@
+https://github.com/user-attachments/assets/77fe53c0-c775-44b7-92d6-1ba5cf548ba9
 🎓 Exam Seating Plan Management System
 
 A PHP + MySQL based web application for generating exam hall seating arrangements, ensuring that students from different courses, batches, and departments sit together.
