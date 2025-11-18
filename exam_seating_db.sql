@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS exam_seating_db;
+
 CREATE DATABASE exam_seating_db;
 USE exam_seating_db;
 
@@ -7,7 +7,7 @@ CREATE TABLE departments (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
     code VARCHAR(20) NOT NULL UNIQUE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Batches
@@ -169,4 +169,5 @@ INSERT INTO exam_enrollments (exam_id, student_id) VALUES
 (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8),
 (2, 9), (2, 10), (2, 11), (2, 12), (2, 13), (2, 14),
 (3, 1), (3, 2), (3, 6), (3, 7),
+
 (4, 15), (4, 16), (4, 17);
