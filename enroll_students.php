@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enroll_students'])) {
                 $success_count++;
             }
         }
-        $success_message = "✅ Enrolled $success_count students successfully!";
+           $success_message = "✅ Enrolled $success_count students successfully!";
     }
 }
 
@@ -347,4 +347,5 @@ $conn->close();
         }
     </script>
 </body>
+
 </html>
