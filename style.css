@@ -1,0 +1,550 @@
+/* responsive.css - Universal Responsive Styles */
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    font-size: 16px;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: white;
+    padding: 2rem 0;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 100;
+}
+
+.sidebar a {
+    display: block;
+    padding: 1rem 2rem;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-x: hidden;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Forms */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-left: 4px solid;
+}
+
+/* Course Grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Visual Seating */
+.classroom-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.row-container {
+    display: grid;
+    grid-template-columns: 50px 1fr 60px 1fr 50px;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.desk {
+    background: white;
+    border: 3px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 0.75rem;
+    min-height: 80px;
+}
+
+/* Alerts */
+.alert {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border-left: 4px solid #28a745;
+}
+
+.alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #dc3545;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ============================================
+   TABLET STYLES (768px - 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+    .navbar h1 {
+        font-size: 1.3rem;
+    }
+    
+    .sidebar {
+        width: 220px;
+    }
+    
+    .sidebar a {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .main-content {
+        padding: 1.5rem;
+    }
+    
+    .card {
+        padding: 1.25rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+    
+    .form-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    
+    th, td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .row-container {
+        grid-template-columns: 40px 1fr 50px 1fr 40px;
+        gap: 0.75rem;
+    }
+    
+    .desk {
+        padding: 0.5rem;
+        min-height: 70px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ============================================
+   MOBILE STYLES (Below 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    /* Show menu toggle */
+    .menu-toggle {
+        display: block;
+    }
+    
+    /* Hide sidebar by default */
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        top: 70px;
+        height: calc(100vh - 70px);
+        width: 250px;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+    
+    /* Show sidebar when active */
+    .sidebar.active {
+        left: 0;
+    }
+    
+    /* Overlay when sidebar is open */
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    
+    .sidebar-overlay.active {
+        display: block;
+    }
+    
+    /* Adjust container */
+    .container {
+        flex-direction: column;
+    }
+    
+    /* Main content full width */
+    .main-content {
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    /* Navbar */
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .navbar h1 {
+        font-size: 1.1rem;
+        padding-right: 3rem;
+    }
+    
+    /* Cards */
+    .card {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    
+    .card h2 {
+        font-size: 1.2rem;
+    }
+    
+    /* Stats Grid - 1 column on mobile */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* Form Grid - 1 column on mobile */
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Tables - Horizontal scroll */
+    .card {
+        overflow-x: auto;
+    }
+    
+    table {
+        min-width: 600px;
+        font-size: 0.85rem;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
+    
+    /* Buttons */
+    .btn {
+        width: 100%;
+        padding: 0.85rem;
+        font-size: 0.95rem;
+    }
+    
+    .btn-small {
+        width: auto;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Course Grid - 1 column */
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .course-card {
+        padding: 1rem;
+    }
+    
+    /* Visual Seating - Stack vertically */
+    .classroom-container {
+        padding: 1rem;
+    }
+    
+    .row-container {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .row-label {
+        text-align: left;
+        padding: 0.5rem 0;
+    }
+    
+    .aisle {
+        display: none;
+    }
+    
+    .desk {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Student Info */
+    .student-info,
+    .exam-info,
+    .session-info {
+        font-size: 0.9rem;
+    }
+    
+    /* Badges */
+    .badge {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
+    }
+    
+    /* Teacher Desk */
+    .teacher-desk {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+    /* Legend */
+    .legend {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    /* Alerts */
+    .alert {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}
+
+/* ============================================
+   SMALL MOBILE (Below 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 1rem;
+    }
+    
+    .card h2 {
+        font-size: 1.1rem;
+    }
+    
+    .stat-card .number {
+        font-size: 2rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    table {
+        font-size: 0.8rem;
+    }
+    
+    th, td {
+        padding: 0.4rem;
+    }
+    
+    .course-code {
+        font-size: 1rem;
+    }
+    
+    .course-name {
+        font-size: 0.9rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .sidebar,
+    .menu-toggle,
+    .sidebar-overlay,
+    .no-print {
+        display: none !important;
+    }
+    
+    .main-content {
+        padding: 0;
+        width: 100%;
+    }
+    
+    .container {
+        display: block;
+    }
+    
+    .card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .desk {
+        break-inside: avoid;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .sidebar {
+        height: auto;
+        max-height: calc(100vh - 70px);
+    }
+}
